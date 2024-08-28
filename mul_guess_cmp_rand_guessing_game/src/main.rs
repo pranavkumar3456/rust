@@ -18,8 +18,11 @@ fn main() {
         .expect("Failed to read line");
 
     let guess: u32 = guess
-        .trim()
-        .parse()
+        .trim()  // trim method on string instance will eliminate any whitespace at the beginning
+                 // and end, which is req to compare string to u32, which contains only numeric
+                 // data.
+        .parse() // parse method will only work on char that can logically be converted into
+                 // numbers.
         .expect("Please type number!");
 
     println!("You guessed: {guess}");
@@ -27,6 +30,7 @@ fn main() {
     match guess.cmp(&secret_number){
          Ordering::Less => println!("Too Small!"),
          Ordering::Greater => println!("Too Big!"),
-         Ordering::Equal => println!("You win!"),
+         Ordering::Equal => {println!("You win!");
+                            break;}
 }}
 }
