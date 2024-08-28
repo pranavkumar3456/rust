@@ -1,0 +1,6 @@
+[package]
+name = "var_mut_diff"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
