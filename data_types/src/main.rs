@@ -128,6 +128,12 @@ fn main() {
    // array are useful when you want data allocated on stack rather than heap
    println!();
 
+  let arr = [1,2,3,4,5];
+  
+  let first = arr[0];
+  let second = arr[1];
+
+  println!("{first},{second}");
 
 
 }
